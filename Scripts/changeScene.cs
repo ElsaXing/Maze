@@ -8,6 +8,7 @@ public class changeScene : MonoBehaviour {
 
 	void OnTriggerEnter(Collider other) {
 		Destroy(gameObject);
-		SceneManager.LoadScene("sample2");
+
+		SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
 	}
 }
