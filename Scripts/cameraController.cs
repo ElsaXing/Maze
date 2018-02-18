@@ -18,7 +18,12 @@ public class cameraController : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		offset = transform.position - player.transform.position;
+		foreach (GameObject wall in walls) {
+			Rigidbody rb = wall.GetComponent<Rigidbody> ();
+			rb.collisionDetectionMode = CollisionDetectionMode.Continuous;
+		}
 	}
+		
 
 	void LateUpdate () {
 		Vector3 cameraPosition = (player.transform.position + offset);
