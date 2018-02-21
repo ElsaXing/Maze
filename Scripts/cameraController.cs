@@ -47,10 +47,11 @@ public class cameraController : MonoBehaviour {
 
 		foreach (GameObject frontBlock in frontBlocks) {
 			distance = transform.position.z - frontBlock.transform.position.z;
+			Renderer renderer = frontBlock.GetComponent<Renderer> ();
 			if (distance > 2) {
-				frontBlock.active = false;
+				renderer.enabled = false;
 			} else {
-				frontBlock.active = true;
+				renderer.enabled = true;
 			}
 		}
 	}

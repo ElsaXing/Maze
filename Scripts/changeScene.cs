@@ -8,25 +8,21 @@ public class changeScene : MonoBehaviour {
 	public Camera endCam;
 	public Animator anim;
 
-	private GameObject[] blocks;
-	private GameObject[] frontBlocks;
+	private GameObject block;
+	private GameObject frontBlock;
 
 	void OnTriggerEnter(Collider other) {
 		Destroy(gameObject);
 
-		blocks = GameObject.FindGameObjectsWithTag("block");
-		frontBlocks = GameObject.FindGameObjectsWithTag ("frontBlock");
-
-		foreach (GameObject block in blocks) {
-			block.active = false;
-		}
-
-		foreach (GameObject frontBlock in frontBlocks) {
-			frontBlock.active = false;
-		}
-
 		mainCam.enabled = false;
 		endCam.enabled = true;
+
+		block = GameObject.Find ("block");
+		frontBlock = GameObject.Find ("FrontBlock");
+
+		block.SetActive (false);
+		frontBlock.SetActive (false);
+
 
 		anim.SetBool ("endLevel", true);
 
