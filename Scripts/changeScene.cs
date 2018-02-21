@@ -18,7 +18,7 @@ public class changeScene : MonoBehaviour {
 		endCam.enabled = true;
 
 		block = GameObject.Find ("block");
-		frontBlock = GameObject.Find ("FrontBlock");
+		frontBlock = GameObject.Find ("frontBlock");
 
 		block.SetActive (false);
 		frontBlock.SetActive (false);

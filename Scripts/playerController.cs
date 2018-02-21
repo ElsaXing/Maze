@@ -38,19 +38,19 @@ public class playerController : MonoBehaviour {
 		}
 
 		//on phone
-		Rect topLeft = new Rect(0, 0, Screen.width / 2, Screen.height / 2);
-		Rect bottomLeft = new Rect(0, Screen.height / 2, Screen.width / 2, Screen.height / 2);
-		Rect right = new Rect(Screen.width / 2, 0, Screen.width / 2, Screen.height);
+		Rect topLeft = new Rect(0, 0, Screen.width / 3, Screen.height / 2);
+		Rect bottomLeft = new Rect(0, Screen.height / 2, Screen.width / 3, Screen.height / 2);
+		Rect right = new Rect(Screen.width * 2 / 3, 0, Screen.width / 2, Screen.height);
 
 		if (Input.touchCount > 0) {
 			var touchPos = Input.GetTouch(0).position;
 			if (topLeft.Contains(touchPos) && Input.GetTouch (0).phase == TouchPhase.Began)
 			{
-				z = 1.2f;
+				z = 1.25f;
 			}
 			if (bottomLeft.Contains(touchPos) && Input.GetTouch (0).phase == TouchPhase.Began)
 			{
-				z = -1.2f;
+				z = -1.25f;
 			}
 			if (right.Contains(touchPos) && Input.GetTouch (0).phase == TouchPhase.Moved)
 			{
