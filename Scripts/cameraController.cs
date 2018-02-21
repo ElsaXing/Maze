@@ -5,8 +5,8 @@ using UnityEngine;
 public class cameraController : MonoBehaviour {
 	public GameObject player;
 	public Material distance_wall;
-	public Material block_wall;
 	public Material original_wall;
+	public Camera endCam;
 
 	private Vector3 offset;
 	private float distance;
@@ -18,6 +18,8 @@ public class cameraController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		endCam.enabled = false;
+
 		walls = GameObject.FindGameObjectsWithTag("wall");
 		frontBlocks = GameObject.FindGameObjectsWithTag ("frontBlock");
 
@@ -39,9 +41,7 @@ public class cameraController : MonoBehaviour {
 			Material targetMaterial = original_wall;
 			if (distance > 3) {
 				targetMaterial = distance_wall;
-			} else if (distance < 1) {
-				targetMaterial = block_wall;
-			} 
+			}
 			wall.GetComponent<Renderer> ().material = targetMaterial;
 		}
 

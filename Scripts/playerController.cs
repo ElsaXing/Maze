@@ -31,10 +31,10 @@ public class playerController : MonoBehaviour {
 		var z = 0f;
 
 		if (Input.GetKeyDown ("w")) {
-			z = -1.2f;
+			z = -1.25f;
 		}
 		if (Input.GetKeyDown ("s")) {
-			z = 1.2f;
+			z = 1.25f;
 		}
 
 		//on phone
