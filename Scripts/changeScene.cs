@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
+
 
 public class changeScene : MonoBehaviour {
 	public Camera mainCam;
@@ -26,6 +26,9 @@ public class changeScene : MonoBehaviour {
 
 		anim.SetBool ("endLevel", true);
 
-		//SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+		if (anim.GetCurrentAnimatorStateInfo(0).IsName("EndAnim"))
+		{
+			Debug.Log ("anim");
+		}
 	}
 }

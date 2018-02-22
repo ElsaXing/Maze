@@ -7,6 +7,7 @@ public class cameraController : MonoBehaviour {
 	public Material distance_wall;
 	public Material original_wall;
 	public Camera endCam;
+	//public Animator anim;
 
 	private Vector3 offset;
 	private float distance;
@@ -29,7 +30,10 @@ public class cameraController : MonoBehaviour {
 			rb.collisionDetectionMode = CollisionDetectionMode.Continuous;
 		}
 	}
-		
+
+	void Update() {
+
+	}
 
 	void LateUpdate () {
 		Vector3 cameraPosition = (player.transform.position + offset);
