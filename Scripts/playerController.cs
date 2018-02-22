@@ -7,14 +7,12 @@ public class playerController : MonoBehaviour {
 	public Rigidbody rb;
 
 	private Vector3 move;
-	//public GameObject[] walls;
 
 	// Use this for initialization
 	void Start () {
 		rb = GetComponent<Rigidbody>();
 		move.Set (0, 0, 0);
 		rb.collisionDetectionMode = CollisionDetectionMode.ContinuousDynamic;
-
 
 	}
 	
