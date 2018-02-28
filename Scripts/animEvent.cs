@@ -9,7 +9,6 @@ public class animEvent : MonoBehaviour {
 	public GameObject Complete;
 	public Canvas canvas;
 
-
 	public void addUI() {
 		if (SceneManager.sceneCountInBuildSettings > SceneManager.GetActiveScene ().buildIndex + 1) {
 			AddNextBtn ();
